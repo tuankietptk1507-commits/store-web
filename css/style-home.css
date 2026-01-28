@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-backgournd: #1E1E1E;
+    --surface--background: #222324;
+    --text-primary: #FFFFFF;
+    --button-primary: #112D4E;
+    --button-primary-hover: ;
+    --border-button-primary: #F3F3F3;
+    --border-button-secondary: #6B7280;
+}

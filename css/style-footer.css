@@ -61,3 +61,22 @@ footer{
     color: var(--text-primary);
     text-decoration: none;
 }
+@media(max-width: 767px){
+    .footer-top{
+        gap: 8px;
+    }
+    .footer-top img{
+        width: 108px;
+        height: 33px;
+    }
+    .footer-top p{
+        font-size: 10px;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .footer-bottom a{
+        font-size: 10px;
+    }
+}

@@ -31,6 +31,26 @@ header{
     width: 109px;
     height: 33px;
 }
+.header-nav{
+    width: 100%;
+    max-width: 184px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header-nav a{
+    display: block;
+    width: 40px;
+    aspect-ratio: 1/1;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-nav a img{
+    width: 24px;
+    height: 24px ;
+}
 .header-right{
     width: 100%;
     max-width: 870px;
@@ -83,4 +103,83 @@ header{
     text-align: center;
     text-transform: uppercase;
     color: var(--text-primary);
+}
+.nav-mobile{
+    display: none;
+}
+
+
+@media(max-width: 767px){
+    .header-container{
+        gap: 20px;
+    }
+    .header-nav{
+        display: none;
+    }
+    .header-right{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+        width: fit-content;
+        gap: 22px;
+        align-items: center;
+    }
+    .nav-mobile-search{
+        width: 100%;
+        max-width: 40px;
+        cursor: pointer;
+        transition: all 0.5s;
+        height: 35px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .nav-mobile-search.nav-mobile-search-active{
+        max-width: 248px;
+    }
+    .nav-mobile-search-img{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-mobile-search.nav-mobile-search-active .nav-mobile-search-img{
+        border-radius: 0px 8px 8px 0;
+        background: #2F2C2F;
+    }
+    .nav-mobile-search input{
+        width: 0px;
+        border: 0;
+        height: 100%;
+        outline: 0;
+        border-radius: 8px 0px 0px 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: var(--text-primary);
+        transition: all 0.5s;
+    }
+
+    .nav-mobile-search.nav-mobile-search-active input{
+        width: 100%;
+        max-width: 200px;
+        background: #2F2C2F;
+        padding-left: 24px;
+        padding-right: 48px;
+        height: 40px;
+    }
+    .nav-mobile-list{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-mobile-list img{
+        width: 24px;
+        height: 19px;
+    }
 }

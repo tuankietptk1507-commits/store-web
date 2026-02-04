@@ -52,6 +52,7 @@ body {
                     display: flex;
                     gap: 4px;
                     align-items: self-start;
+                    line-height:100%;
 
                     img {
                         margin-top: 4px;
@@ -552,7 +553,7 @@ body {
 
             .simi--box {
                 .simi--item {
-                   max-width: 400px;
+                    max-width: 400px;
                     width: 100%;
 
 
@@ -587,34 +588,59 @@ body {
             }
 
             .simi--box {
+                padding-inline: 0;
                 overflow: hidden;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 0;
+
                 .simi--item {
                     max-width: 1500px;
                     width: 100%;
                     display: flex;
                     flex-wrap: nowrap;
                     gap: 0;
+
+                    .simi--1 {
+                        img {
+                            width: 82px;
+                            height: auto;
+                        }
+
+                        .simi--a {
+                            gap: 2px;
+                            padding-top: 4px;
+
+                            h4 {
+                                font-size: 13px;
+                            }
+
+                            h5 {
+                                font-family: 'Content';
+                                font-weight: 400;
+                                font-size: 4px;
+                                color: #CDCDCD82;
+                            }
+
+                            p {
+                                font-size: 4px;
+                                line-height: 110%;
+                            }
+
+                            button {
+                                width: 56px;
+                                height: 16px;
+                                font-size: 4px;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
-@media screen  and (max-width:680px){
-     body {
-        .similar {
-            .simi--box {
-                .simi--img{
-                }
-                .simi--item {
-                
-                }
-            }
-        }
-    }
-}
+
 @media screen and (max-width:600px) {
     body {
         padding-top: 0;

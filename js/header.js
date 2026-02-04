@@ -1,7 +1,7 @@
 let head = `        <div class="header-container">
             <img class="header-logo" src="img/home/logo.svg">
             <div class="header-nav">
-                <a href=""><img src="img/home/nav-ico-1.svg" alt=""></a>
+                <a href="index.html"><img src="img/home/nav-ico-1.svg" alt=""></a>
                 <a href=""><img src="img/home/nav-ico-2.svg" alt=""></a>
                 <a href=""><img src="img/home/nav-ico-3.svg" alt=""></a>
             </div>

@@ -20,7 +20,7 @@ header{
 }
 .header-container{
     width: 95%;
-    max-width: 1875px;
+    max-width: 1328px;
     padding: 18px 0;
     display: flex;
     justify-content: space-between;
@@ -54,12 +54,12 @@ header{
 }
 .header-right{
     width: 100%;
-    max-width: 870px;
+    max-width: 614px;
     min-height: 41px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 36px;
 }
 .header-search{
     position: relative;

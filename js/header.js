@@ -8,9 +8,9 @@ let head = `        <div class="header-container">
             <div class="header-right">
                 <div class="header-search">
                     <img src="img/home/search-ico.svg" alt="" >
-                    <input type="text" placeholder="Quick search">
+                    <input type="text" placeholder="Tìm kiếm">
                 </div>
-                <button class="header-login">LOGIN</button>
+                <button class="header-login">ĐĂNG NHẬP</button>
             </div>
             <div class="nav-mobile">
                 <div class="nav-mobile-search" id="search-mobile" >

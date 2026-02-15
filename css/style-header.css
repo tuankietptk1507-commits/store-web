@@ -28,6 +28,7 @@ header{
     gap: 40px;
 }
 .header-logo{
+    cursor: pointer;
     width: 109px;
     height: 33px;
 }
@@ -91,9 +92,8 @@ header{
 }
 .header-login{
     cursor: pointer;
-    width: 100%;
-    max-width: 96px;
-    min-height: 38px;
+    padding: 10px;
+    min-width: 117px;
     background-color: transparent;
     border: 1px solid var(--border-button-secondary);
     border-radius: 4px;

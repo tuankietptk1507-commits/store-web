@@ -27,6 +27,7 @@
         rel="stylesheet">
          <link rel="stylesheet" href="css/style-header.css">
     <link rel="stylesheet" href="css/style-footer.css">
+    <link rel="stylesheet" href="css/style-popup-accept.css">
 </head>
 
 <body>
@@ -45,8 +46,7 @@
                     </div>
                 </div>
             </div>
-            <button class="app-download-btn">Tải về APK (2.5 MB)<img src="./img/detail/material-symbols_download.svg"
-                    alt=""></button>
+            <button class="app-download-btn" id="btn-download">Tải về APK (2.5 MB)<img src="./img/detail/material-symbols_download.svg"alt=""></button>
         </div>
         <div class="app-rating">
             <div class="rating-score"><img src="./img/detail/material-symbols-light_star.svg" alt="">
@@ -148,8 +148,27 @@
             </div>
         </div>
     </div>
+    <div class="popup-accept" id="popup-accept">
+        <div class="popup-accept-container">
+            <img class="popup-accept-img" src="img/detail/popup-note.svg" alt="">
+            <div class="popup-accept-content">
+                <p class="popup-accept-content-tittle">Bạn chắc chắn muốn tải xuống?</p>
+            </div>
+            <div class="popup-accept-button">
+                <button class="popup-accept-button-no" id="btn-download-no">Không</button>
+                <a class="popup-accept-button-yes" href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk" download="file.apk" id="btn-download-yes">Có</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-loadding" id="popup-loading">
+        <div class="popup-loadding-container">
+            <img src="img/detail/loading.svg" alt="" class="popup-loadding-img">
+            <div class="popup-loadding-tittle">Đang tải xuống</div>
+        </div>
+    </div>
     <footer></footer>
 </body>
+<script src="js/download.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
 </html>

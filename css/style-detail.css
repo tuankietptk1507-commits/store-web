@@ -98,6 +98,7 @@ body {
             }
 
             .app-download-btn {
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 gap: 52px;
@@ -111,6 +112,7 @@ body {
                 line-height: 100%;
                 letter-spacing: 0%;
                 color: #ffffff;
+                text-decoration: none;
 
                 img {
                     width: 26px;

@@ -510,7 +510,7 @@ body {
                 flex-direction: column;
                 gap: 0px;
                 position: absolute;
-                top: 160px;
+                top: 250px;
 
                 .rating-score {
                     display: flex;

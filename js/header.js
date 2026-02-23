@@ -10,7 +10,7 @@ let head = `        <div class="header-container">
                     <img src="img/home/search-ico.svg" alt="" >
                     <input type="text" placeholder="Tìm kiếm">
                 </div>
-                <button class="header-login">ĐĂNG NHẬP</button>
+                 <a href="./login.html"><button class="header-login">ĐĂNG NHẬP</button></a>
             </div>
             <div class="nav-mobile">
                 <div class="nav-mobile-search" id="search-mobile" >

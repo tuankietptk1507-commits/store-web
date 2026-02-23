@@ -175,3 +175,61 @@ body {
 input[type="password"]::-ms-reveal {
     display: none;
 }
+@media screen and (max-width: 780px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        flex: none;
+        width: 100%;
+        padding: 30px 20px;
+        background: #ffffff;
+    }
+
+    .form-box {
+        max-width: 540px;
+        width: 100%;
+    }
+
+    .form-box h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .input-group {
+        margin-bottom: 16px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .input-group input {
+        padding: 12px 10px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    .btn-primary,
+    .btn-google {
+        height: 42px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .login-text {
+        font-size: 13px;
+    }
+
+    .password-box img {
+        width: 18px;
+        height: 18px;
+    }
+}

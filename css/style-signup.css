@@ -3,15 +3,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins';
+    font-family: 'Poppins';
 }
 
 body {
+    position: relative;
 }
+
+.btn-back {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: #eeeeee2e;
+}
+
+.btn-back img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-back .back-2 {
+    display: none;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 255, 255, 0.241);
+}
+
 .container {
     display: flex;
     min-height: 100vh;
 }
+
 .left {
     flex: 1;
     background: linear-gradient(135deg, #0f1f5f, #0a0f2e);
@@ -21,13 +50,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .logo {
     display: flex;
     align-items: center;
-      width: 179px;
+    width: 179px;
     height: 54px;
 }
-.logo img{
+
+.logo img {
     width: 100%;
     height: 100%;
 }
@@ -84,7 +115,7 @@ body {
 }
 
 .input-group input:focus {
-     border: 1px solid#b1d2f1;
+    border: 1px solid#b1d2f1;
     box-shadow: 0 0 0 2px #a9cff3;
 }
 
@@ -158,6 +189,7 @@ body {
     color: #1570EF;
     text-decoration: none;
 }
+
 .password-box img {
     position: absolute;
     right: 16px;
@@ -175,7 +207,33 @@ body {
 input[type="password"]::-ms-reveal {
     display: none;
 }
+
 @media screen and (max-width: 780px) {
+    .btn-back {
+        background-color: #40404023;
+    }
+
+    .btn-back .back-2 {
+        display: block;
+    }
+
+    .btn-back .back-1 {
+        display: none;
+    }
+
+    .btn-back {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-back img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .btn-back:hover {
+        background-color: #4040402d;
+    }
 
     .container {
         flex-direction: column;
@@ -188,7 +246,7 @@ input[type="password"]::-ms-reveal {
     .right {
         flex: none;
         width: 100%;
-        padding: 30px 20px;
+        padding: 50px 20px;
         background: #ffffff;
     }
 

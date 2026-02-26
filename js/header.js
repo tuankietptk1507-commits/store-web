@@ -10,6 +10,11 @@ if (user) {
     authHTML = `
         <div class="header-user">
             <img src="${user.avatar}" class="header-avatar" title="${user.email}">
+            <div class="user-dropdown" id="userDropdown">
+                <a href="#" class="dropdown-item"><img src="./img/home/user-line (2).svg" alt="">Tài khoản</a>
+                <a href="#" class="dropdown-item"><img src="./img/home/upload-2-line.svg" alt="">Đăng bài</a>
+                <div class="dropdown-item logout"><img src="./img/home/logout-box-line.svg" alt="">Đăng xuất</div>
+            </div>
         </div>
     `;
 }
@@ -49,8 +54,17 @@ let head = `
 document.getElementsByTagName("header")[0].innerHTML = head;
 
 document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("header-avatar")) {
+    const avatar = document.querySelector(".header-avatar");
+    const dropdown = document.getElementById("userDropdown");
+    if (!avatar) return;
+    if (avatar.contains(e.target)) {
+        dropdown.classList.toggle("show");
+    }
+    else if (e.target.classList.contains("logout")) {
         localStorage.removeItem("user");
         window.location.reload();
+    }
+    else {
+        if (dropdown) dropdown.classList.remove("show");
     }
 });

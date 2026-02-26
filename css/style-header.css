@@ -122,6 +122,47 @@ header{
 .header-avatar:hover {
     transform: scale(1.1);
 }
+.header-user {
+    position: relative;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 160px;
+    background: #2A2A2A;
+    border-radius: 8px;
+    padding: 8px 0;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.user-dropdown.show {
+    display: flex;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dropdown-item img{
+    width: 16px;
+    height: 16px;
+}
+.dropdown-item:hover {
+    background: #3A3A3A;
+}
+
 @media(max-width: 767px){
     .header-container{
         gap: 20px;

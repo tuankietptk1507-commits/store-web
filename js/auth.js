@@ -21,14 +21,19 @@ function register(email, password) {
     window.location.href = "login.html";
 }
 function login(email, password) {
+    const users = getUsers();
 
-    if (email && password) {
+    const user = users.find(
+        user => user.email === email && user.password === password
+    );
 
-        const user = {
-            email: email,
-            avatar: `https://ui-avatars.com/api/?name=${email}&background=1570EF&color=fff`
+    if (user) {
+        const loggedInUser = {
+            email: user.email,
+            avatar: `https://ui-avatars.com/api/?name=${user.email}&background=1570EF&color=fff`
         };
-        localStorage.setItem("user", JSON.stringify(user));
+
+        localStorage.setItem("user", JSON.stringify(loggedInUser));
         window.location.href = "index.html";
     } else {
         alert("Sai thông tin đăng nhập!");

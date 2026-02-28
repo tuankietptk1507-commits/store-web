@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UniStore Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-signup.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<script src="js/auth.js"></script>
+<script src="./js/signup.js"></script>
+<body>
+    <a class="btn-back" href="./login.html"><img class="back-1" src="./img/login/arrow-left-line (1).svg" alt=""><img class="back-2" src="./img/login/arrow-left-line.svg" alt=""></a>
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+              <img src="./img/login/logo.svg" alt="">
+            </div>
+            <div class="welcome-text">
+                <h1>
+                    Welcome.<br>
+                    Start your journey<br>
+                    now with our<br>
+                    management<br>
+                    system!
+                </h1>
+            </div>
+        </div>
+        <div class="right">
+            <div class="form-box">
+                <h2>Create an account</h2>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="signup-email" placeholder="poppie@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-box">
+                        <input type="password" id="signup-password" placeholder="Enter your password">
+                        <img src="./img/login/eye-close-line (1).svg" class="eye-close" alt="">
+                        <img src="./img/login/eye-line (1).svg" class="eye-open" alt="">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="handleRegister()">Create account</button>
+                <button class="btn-google">
+                    <img src="./img/login/Google - Original.svg" alt="">
+                    Continue with Google
+                </button>
+                <p class="login-text">
+                    Already Have An Account ?
+                    <a href="./login.html">Log In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const passwordbox = document.querySelector('.password-box input');
+    const eyeClose = document.querySelector('.eye-close');
+    const eyeOpen = document.querySelector('.eye-open');
+
+    eyeClose.addEventListener('click', function () {
+        passwordbox.type = 'text';
+        eyeClose.style.display = 'none';
+        eyeOpen.style.display = 'block';
+    });
+
+    eyeOpen.addEventListener('click', function () {
+        passwordbox.type = 'password';
+        eyeOpen.style.display = 'none';
+        eyeClose.style.display = 'block';
+    });
+</script>
+</html>

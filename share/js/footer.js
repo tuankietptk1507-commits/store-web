@@ -1,6 +1,6 @@
 const foot = `        <div class="footer-container">
             <div class="footer-top">
-                <img src="img/home/logo.svg" alt="">
+                <img src="../../img/home/logo.svg" alt="">
                 <p>@2025. UniStore. ALL RIGHTS RESERVED  </p>
             </div>
             <div class="footer-bottom">

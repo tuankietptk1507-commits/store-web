@@ -18,7 +18,7 @@ function register(email, password) {
     saveUsers(users);
 
     alert("Đăng ký thành công!");
-    window.location.href = "login.html";
+    window.location.href = "../../pages/login/login.html";
 }
 function login(email, password) {
     const users = getUsers();
@@ -34,7 +34,7 @@ function login(email, password) {
         };
 
         localStorage.setItem("user", JSON.stringify(loggedInUser));
-        window.location.href = "index.html";
+        window.location.href = "../../pages/home/index.html";
     } else {
         alert("Sai thông tin đăng nhập!");
     }

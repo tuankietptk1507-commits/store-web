@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-backgournd: #1E1E1E;
+    --surface--background: #222324;
+    --text-primary: #FFFFFF;
+    --button-primary: #112D4E;
+    --button-primary-hover: ;
+    --border-button-primary: #F3F3F3;
+    --border-button-secondary: #6B7280;
+    --main-font: "Inter";
+}
+body{
+    background-color: var(--main-backgournd);
+}
+.body{
+    width: 100%;
+    display: flex;
+}
+.upload{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.upload-container{
+    width: 90%;
+    max-width: 1262px;
+    padding: 48px 44px;
+    background-color: #00000038;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+.upload-file{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+.upload-file-tittle{
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--text-primary);
+}
+.upload-file-main{
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    padding: 37px 0px 105px 0;
+    display: flex;
+    gap: 33px;
+    flex-direction: column;
+    align-items: center;
+    border: 3px dashed #98A2B3;
+}
+.upload-file-main-ico{
+    width: 70px;
+    height: 70px;
+    -webkit-mask-image: url(../../img/upload/ico-upload.svg);
+    mask-image: url(../../img/upload/ico-upload.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: var(--border-button-primary);
+}
+.upload-file-main-text{
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--text-primary);
+}
+.upload-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+.upload-detail-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.upload-detail form{
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.upload-detail form label{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--text-primary);
+}
+.upload-detail form input{
+    width: 100%;
+    outline: none;
+    border: 2px solid #98A2B3;
+    background-color: transparent;
+    padding: 23px 10px;
+    border-radius: 12px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--text-primary);
+}
+.upload-detail-bottom form{
+    max-width: none;
+}
+.upload-detail form textarea{
+    width: 100%;
+    min-height: 343px;
+    outline: none;
+    border: 2px solid #98A2B3;
+    background-color: transparent;
+    padding: 23px 10px;
+    border-radius: 12px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--text-primary);
+}
+.upload-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+}
+.upload-button button{
+    cursor: pointer;
+    width: 100%;
+    max-width: 338px;
+    padding: 30.5px 94px;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--text-primary);
+}
+.upload-btn-none{
+    background-color: transparent;
+    border: 3px solid #162B7F
+}
+.upload-btn-save{
+    background: #162B7F;
+    border: 0;
+}

@@ -1,31 +1,93 @@
-// Kiểm tra dữ liệu
-console.log("Trang Tất cả ứng dụng đã nhận data: ", appsData);
+const appsData = [
+  {
+    id: "app1",
+    title: "VALORANT",
+    author: "by Riot Games",
+    img: "../../img/home/background-val.png",
+    version: "8.0",
+    isHero: true,
+    isPopular: false,
+    isNew: false,
+  },
+  {
+    id: "app2",
+    title: "PUBG BATTLEGROUNDS",
+    author: "by Krafton",
+    img: "../../img/home/background-pubg.png",
+    version: "28.1",
+    isHero: true,
+    isPopular: false,
+    isNew: false,
+  },
+  {
+    id: "app3",
+    title: "League of Legends",
+    author: "by Riot Games",
+    img: "../../img/home/background-LOL.png",
+    version: "14.4",
+    isHero: true,
+    isPopular: true,
+    isNew: false,
+  },
+  {
+    id: "app4",
+    title: "TFT",
+    author: "by Riot Games",
+    img: "../../img/home/background-game-gi-hog-biet.png",
+    version: "14.4",
+    isHero: true,
+    isPopular: true,
+    isNew: true,
+  },
 
-const allAppsContainer = document.getElementById('all-apps-container');
-
-if (allAppsContainer) {
-    let html = '';
-    
-    // Duyệt qua TOÀN BỘ mảng appsData
-    appsData.forEach(app => {
-        html += `
-            <div class="section-list-item">
-                <div class="section-list-item-img">
-                    <img src="${app.img}" alt="${app.title}">
-                </div>
-                <div class="section-list-item-content">
-                    <div class="section-list-item-content-left">
-                        <p class="section-list-item-content-left-tittle">${app.title}</p>
-                        <p class="section-list-item-content-left-text">${app.author} | v${app.version}</p>
-                    </div>
-                    <div class="section-list-item-content-right">
-                        <a href="../detail/detail.html?id=${app.id}" class="section-list-item-content-right-btn">Tải xuống</a>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-    
-    // Đổ vào giao diện
-    allAppsContainer.innerHTML = html;
-}
+  {
+    id: "app5",
+    title: "Duolingo",
+    author: "by Duolingo",
+    img: "../../share/img/app5.jpg",
+    version: "6.10",
+    isHero: false,
+    isPopular: true,
+    isNew: false,
+  },
+  {
+    id: "app6",
+    title: "Google Classroom",
+    author: "by Google LLC",
+    img: "../../share/img/app6.png",
+    version: "9.0",
+    isHero: false,
+    isPopular: true,
+    isNew: false,
+  },
+  {
+    id: "app7",
+    title: "Khan Academy",
+    author: "by Khan Academy",
+    img: "../../share/img/app7.png",
+    version: "8.2",
+    isHero: false,
+    isPopular: true,
+    isNew: false,
+  },
+  {
+    id: "app8",
+    title: "Coursera",
+    author: "by Coursera Inc.",
+    img: "../../share/img/app8.png",
+    version: "5.4",
+    isHero: false,
+    isPopular: true,
+    isNew: true,
+  },
+  {
+    id: "app9",
+    title: "Quizlet",
+    author: "by Quizlet Inc.",
+    img: "../../share/img/app9.png",
+    version: "7.15",
+    isHero: false,
+    isPopular: true,
+    isNew: true,
+  },
+];

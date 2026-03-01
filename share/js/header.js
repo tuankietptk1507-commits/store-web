@@ -12,7 +12,7 @@ if (user) {
             <img src="${user.avatar}" class="header-avatar" title="${user.email}">
             <div class="user-dropdown" id="userDropdown">
                 <a href="#" class="dropdown-item"><img src="../../img/home/user-line (2).svg" alt="">Tài khoản</a>
-                <a href="#" class="dropdown-item"><img src="../../img/home/upload-2-line.svg" alt="">Đăng bài</a>
+                <a href="../upload/upload.html" class="dropdown-item"><img src="../../img/home/upload-2-line.svg" alt="">Đăng bài</a>
                 <div class="dropdown-item logout"><img src="../../img/home/logout-box-line.svg" alt="">Đăng xuất</div>
             </div>
         </div>

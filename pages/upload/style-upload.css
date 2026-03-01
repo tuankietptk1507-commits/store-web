@@ -154,8 +154,8 @@ body{
 .upload-button button{
     cursor: pointer;
     width: 100%;
-    max-width: 338px;
-    padding: 30.5px 94px;
+    max-width: 200px;
+    padding: 24px;
     font-family: var(--main-font);
     font-weight: 600;
     font-style: Semi Bold;

@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     gap: 20px;
     background-color: #1e1e1e;
+    position: relative;
 
     .app-card {
         padding: 68px 44px;
@@ -81,14 +82,14 @@ body {
                         border-radius: 4px;
 
                         img {
-                            width: 16px;
-                            height: 16px;
+                            width: 20px;
+                            height: 20px;
                         }
 
                         p {
                             font-family: 'Inter';
                             font-weight: 400;
-                            font-size: 8px;
+                            font-size: 14px;
                             line-height: 100%;
                             letter-spacing: 0%;
                             color: #D6DCE6;

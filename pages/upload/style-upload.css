@@ -29,7 +29,7 @@ body{
 .upload-container{
     width: 90%;
     max-width: 1262px;
-    padding: 48px 44px;
+    padding: 48px 50px;
     background-color: #00000038;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ body{
     font-family: var(--main-font);
     font-weight: 600;
     font-style: Semi Bold;
-    font-size: 46px;
+    font-size: 35px;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--text-primary);
@@ -54,7 +54,7 @@ body{
     cursor: pointer;
     text-decoration: none;
     width: 100%;
-    padding: 37px 0px 105px 0;
+    padding: 37px 0px 95px 0;
     display: flex;
     gap: 33px;
     flex-direction: column;
@@ -62,8 +62,8 @@ body{
     border: 3px dashed #98A2B3;
 }
 .upload-file-main-ico{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     -webkit-mask-image: url(../../img/upload/ico-upload.svg);
     mask-image: url(../../img/upload/ico-upload.svg);
     -webkit-mask-size: cover;
@@ -78,7 +78,7 @@ body{
     font-family: var(--main-font);
     font-weight: 600;
     font-style: Semi Bold;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -106,7 +106,7 @@ body{
 .upload-detail form label{
     font-family: var(--main-font);
     font-weight: 500;
-    font-size: 36px;
+    font-size: 25px;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--text-primary);
@@ -116,12 +116,12 @@ body{
     outline: none;
     border: 2px solid #98A2B3;
     background-color: transparent;
-    padding: 23px 10px;
+    padding: 15px 10px;
     border-radius: 12px;
     font-family: var(--main-font);
     font-weight: 400;
     font-style: Regular;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--text-primary);
@@ -131,16 +131,16 @@ body{
 }
 .upload-detail form textarea{
     width: 100%;
-    min-height: 343px;
+    min-height: 300px;
     outline: none;
     border: 2px solid #98A2B3;
     background-color: transparent;
-    padding: 23px 10px;
+    padding: 15px 10px;
     border-radius: 12px;
     font-family: var(--main-font);
     font-weight: 400;
     font-style: Regular;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--text-primary);
@@ -155,14 +155,15 @@ body{
     cursor: pointer;
     width: 100%;
     max-width: 200px;
-    padding: 24px;
+    padding: 12px;
     font-family: var(--main-font);
-    font-weight: 600;
+    font-weight: 500;
     font-style: Semi Bold;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--text-primary);
+    border-radius: 5px;
 }
 .upload-btn-none{
     background-color: transparent;

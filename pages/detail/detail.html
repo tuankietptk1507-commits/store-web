@@ -25,7 +25,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Content:wght@400;700&display=swap"
         rel="stylesheet">
-         <link rel="stylesheet" href="../../share/css/style-header.css">
+    <link rel="stylesheet" href="../../share/css/style-header.css">
     <link rel="stylesheet" href="../../share/css/style-footer.css">
     <link rel="stylesheet" href="../popup/style-popup-accept.css">
 </head>
@@ -45,7 +45,8 @@
                     </div>
                 </div>
             </div>
-            <button class="app-download-btn" id="btn-download">Tải về APK (2.5 MB)<img src="../../img/detail/material-symbols_download.svg"alt=""></button>
+            <button class="app-download-btn" id="btn-download">Tải về APK (2.5 MB)<img
+                    src="../../img/detail/material-symbols_download.svg" alt=""></button>
         </div>
         <div class="app-rating">
             <div class="rating-score"><img src="../../img/detail/material-symbols-light_star.svg" alt="">
@@ -80,22 +81,10 @@
                 <h3 class="rating-number">5.0</h3>
                 <p class="rating-total">1N XẾP HẠNG</p>
             </div>
-            
+
             <div class="rating-breakdown">
                 <div class="rating-bar">
-                    <span class="rating-star-count">1</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">2</span>
-                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
-                    <div class="rating-progress"></div>
-                </div>
-
-                <div class="rating-bar">
-                    <span class="rating-star-count">3</span>
+                    <span class="rating-star-count">5</span>
                     <img src="../../img/detail/material-symbols-light_star.svg" alt="">
                     <div class="rating-progress"></div>
                 </div>
@@ -107,11 +96,36 @@
                 </div>
 
                 <div class="rating-bar">
-                    <span class="rating-star-count">5</span>
+                    <span class="rating-star-count">3</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">2</span>
+                    <img src="../../img/detail/material-symbols-light_star.svg" alt="">
+                    <div class="rating-progress"></div>
+                </div>
+
+                <div class="rating-bar">
+                    <span class="rating-star-count">1</span>
                     <img src="../../img/detail/material-symbols-light_star.svg" alt="">
                     <div class="rating-progress"></div>
                 </div>
             </div>
+        </div>
+        <div class="rating-input">
+            <h3>Viết đánh giá của bạn</h3>
+            <div class="star-select" id="star-select">
+                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="1">
+                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="2">
+                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="3">
+                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="4">
+                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="5">
+            </div>
+            <textarea id="comment-input" placeholder="Viết bình luận của bạn..."></textarea>
+            <button id="submit-comment">Gửi đánh giá</button>
+
         </div>
         <div class="rating-list">
             <div class="rating-card">
@@ -155,7 +169,9 @@
             </div>
             <div class="popup-accept-button">
                 <button class="popup-accept-button-no" id="btn-download-no">Không</button>
-                <a class="popup-accept-button-yes" href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk" download="file.apk" id="btn-download-yes">Có</a>
+                <a class="popup-accept-button-yes"
+                    href="https://jeugjcwiplkysgmwdysd.supabase.co/storage/v1/object/public/fileAPK/file.apk"
+                    download="file.apk" id="btn-download-yes">Có</a>
             </div>
         </div>
     </div>
@@ -166,8 +182,48 @@
         </div>
     </div>
     <footer></footer>
+    <script>
+        const btn = document.getElementById("submit-comment");
+        const commentInput = document.getElementById("comment-input");
+        const ratingList = document.querySelector(".rating-list");
+
+        btn.addEventListener("click", () => {
+
+            if (commentInput.value === "" || selectedRating === 0) {
+                alert("Vui lòng nhập bình luận và chọn số sao");
+                return;
+            }
+
+            const card = document.createElement("div");
+            card.className = "rating-card";
+
+            let starsHTML = "";
+
+            for (let i = 0; i < selectedRating; i++) {
+                starsHTML += `<img src="../../img/detail/material-symbols-light_star.svg">`;
+            }
+
+            card.innerHTML = `
+        <h5 class="rating-card-title">${commentInput.value}</h5>
+
+        <div class="rating-card-stars">
+            ${starsHTML}
+        </div>
+
+        <div class="rating-card-info">
+            <img src="../../img/detail/Frame 120 (1).png">
+            <p>Hôm nay</p>
+        </div>
+    `;
+
+            ratingList.prepend(card);
+
+            commentInput.value = "";
+        });
+    </script>
 </body>
 <script src="../popup/download.js"></script>
 <script src="../../share/js/header.js"></script>
 <script src="../../share/js/footer.js"></script>
+
 </html>

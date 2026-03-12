@@ -26,25 +26,3 @@ popupLoading.addEventListener("click", (e) => {
         popupLoading.classList.remove("active")
     }
 })
-const stars = document.querySelectorAll(".star");
-let selectedRating = 0;
-
-stars.forEach((star, index) => {
-
-    star.addEventListener("click", () => {
-
-        selectedRating = index + 1;
-
-        stars.forEach((s, i) => {
-
-            if(i < selectedRating){
-                s.classList.add("active");
-            }else{
-                s.classList.remove("active");
-            }
-
-        });
-
-    });
-
-});

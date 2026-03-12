@@ -15,22 +15,10 @@
 }
 
 header {
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* background-color: var(--main-backgournd); */
-    position: fixed;
-    bottom: 10px;
-      background: rgba(100, 100, 100, 0.485); /* nền trong suốt */
-    backdrop-filter: blur(10px);       /* làm mờ phía sau */
-    -webkit-backdrop-filter: blur(10px);
-
-    max-width: 1306px;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 25px;
+    background-color: var(--main-backgournd);
 }
 
 .header-container {
@@ -220,7 +208,7 @@ header {
 
 .user-dropdown {
     position: absolute;
-    top: -135px;
+    top: 50px;
     right: 0;
     width: 160px;
     background: #2A2A2A;

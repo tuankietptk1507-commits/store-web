@@ -115,16 +115,26 @@
             </div>
         </div>
         <div class="rating-input">
-            <h3>Viết đánh giá của bạn</h3>
-            <div class="star-select" id="star-select">
-                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="1">
-                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="2">
-                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="3">
-                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="4">
-                <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="5">
+
+            <h3 class="review-title">Viết đánh giá của bạn</h3>
+
+            <div class="review-box">
+
+                <div class="star-select" id="star-select">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="1">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="2">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="3">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="4">
+                    <img src="../../img/detail/material-symbols-light_star.svg" class="star" data-value="5">
+                </div>
+
+                <textarea id="comment-input" placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+
+                <button id="submit-comment">
+                    Gửi đánh giá
+                </button>
+
             </div>
-            <textarea id="comment-input" placeholder="Viết bình luận của bạn..."></textarea>
-            <button id="submit-comment">Gửi đánh giá</button>
 
         </div>
         <div class="rating-list">
@@ -183,13 +193,50 @@
     </div>
     <footer></footer>
     <script>
+        const stars = document.querySelectorAll(".star");
         const btn = document.getElementById("submit-comment");
         const commentInput = document.getElementById("comment-input");
         const ratingList = document.querySelector(".rating-list");
 
+        let selectedRating = 0;
+
+        stars.forEach((star, index) => {
+
+            star.addEventListener("mouseover", () => {
+
+                stars.forEach((s, i) => {
+                    s.classList.toggle("hover", i <= index);
+                });
+
+            });
+
+            star.addEventListener("mouseout", () => {
+
+                stars.forEach(s => s.classList.remove("hover"));
+
+            });
+
+            star.addEventListener("click", () => {
+
+                selectedRating = index + 1;
+
+                stars.forEach((s, i) => {
+
+                    if (i < selectedRating) {
+                        s.classList.add("active");
+                    } else {
+                        s.classList.remove("active");
+                    }
+
+                });
+
+            });
+
+        });
+
         btn.addEventListener("click", () => {
 
-            if (commentInput.value === "" || selectedRating === 0) {
+            if (commentInput.value.trim() === "" || selectedRating === 0) {
                 alert("Vui lòng nhập bình luận và chọn số sao");
                 return;
             }
@@ -203,6 +250,8 @@
                 starsHTML += `<img src="../../img/detail/material-symbols-light_star.svg">`;
             }
 
+            const today = new Date().toLocaleDateString("vi-VN");
+
             card.innerHTML = `
         <h5 class="rating-card-title">${commentInput.value}</h5>
 
@@ -212,13 +261,17 @@
 
         <div class="rating-card-info">
             <img src="../../img/detail/Frame 120 (1).png">
-            <p>Hôm nay</p>
+            <p>${today}</p>
         </div>
     `;
 
             ratingList.prepend(card);
 
             commentInput.value = "";
+            selectedRating = 0;
+
+            stars.forEach(s => s.classList.remove("active"));
+
         });
     </script>
 </body>
